@@ -1,7 +1,7 @@
 {
   "author": "brunch",
   "name": "brunch-extensions",
-  "description": "Brunch extensions",
+  "description": "Official brunch extensions. Adds support of many languages to brunch.",
   "version": "0.1.0",
   "homepage": "https://github.com/brunch/brunch-extensions",
   "repository": {
