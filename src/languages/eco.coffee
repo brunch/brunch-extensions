@@ -5,4 +5,4 @@ class exports.EcoLanguage extends BaseLanguage
   compile: (file, callback) ->
     @readFile file, (error, data) =>
       return callback error if error?
-      eco.compile data, callback
+      callback null, eco.compile data

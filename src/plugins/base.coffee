@@ -1,12 +1,14 @@
+path = require 'path'
+
 class exports.BasePlugin
-  constructor: (@options) ->
+  constructor: (@config) ->
     null
 
   getRootPath: (subPathes...) ->
-    path.join @options.rootPath, subPathes...
+    path.join @config.rootPath, subPathes...
 
   getBuildPath: (subPathes...) ->
-    path.join @options.buildPath, subPathes...
+    path.join @config.buildPath, subPathes...
 
-  compile: (callback) ->
+  load: (callback) ->
     callback()
