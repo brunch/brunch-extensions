@@ -1,8 +1,8 @@
 {
-  "author": "Brunch team (http://brunch.io/)",
+  "author": "brunch",
   "name": "brunch-extensions",
   "description": "Brunch extensions",
-  "version": "0.1.0-dev",
+  "version": "0.1.0",
   "homepage": "https://github.com/brunch/brunch-extensions",
   "repository": {
     "type": "git",
