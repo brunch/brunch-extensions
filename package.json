@@ -1,8 +1,8 @@
 {
-  "author": "brunch",
   "name": "brunch-extensions",
+  "version": "0.2.0",
   "description": "Official brunch extensions. Adds support of many languages to brunch.",
-  "version": "0.1.0",
+  "author": "Brunch team (http://brunch.io)",
   "homepage": "https://github.com/brunch/brunch-extensions",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   },
   "main": "./lib/index",
   "scripts": {
-    "postinstall": "./node_modules/coffee-script/bin/coffee -o lib/ src/",
+    "prepublish": "./node_modules/coffee-script/bin/coffee -o lib/ src/",
     "test": "./node_modules/mocha/bin/mocha"
   },
   "engines": {
