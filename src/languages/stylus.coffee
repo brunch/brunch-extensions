@@ -15,6 +15,7 @@ class exports.StylusLanguage extends BaseLanguage
       compiler = stylus(data)
         .set('compress', yes)
         .set('firebug', !!@config.stylus?.firebug)
+        .include(@getRootPath 'app', 'styles')
 
       compiler.use nib if nib
       compiler.render callback
