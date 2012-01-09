@@ -10,7 +10,7 @@
   },
   "main": "./lib/index",
   "scripts": {
-    "prepublish": "./node_modules/coffee-script/bin/coffee -o lib/ src/",
+    "prepublish": "coffee -o lib/ src/",
     "test": "./node_modules/mocha/bin/mocha"
   },
   "engines": {
