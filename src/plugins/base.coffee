@@ -10,5 +10,5 @@ class exports.BasePlugin
   getBuildPath: (subPathes...) ->
     path.join @config.buildPath, subPathes...
 
-  load: (callback) ->
+  load: (files, callback) ->
     callback()

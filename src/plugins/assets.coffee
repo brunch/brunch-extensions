@@ -1,12 +1,12 @@
 async = require 'async'
 mkdirp = require 'mkdirp'
+{ncp} = require 'ncp'
 path = require 'path'
 {BasePlugin} = require './base'
-helpers = require '../helpers'
-
 
 class exports.AssetsPlugin extends BasePlugin
-  load: (callback) ->
+  load: (files, callback) ->
     from = path.resolve @getRootPath 'app', 'assets'
     to = path.resolve @getBuildPath ''
-    helpers.walkTreeAndCopyFiles from, to, callback
+    ncp from, to, (error) ->
+      callback error, files
