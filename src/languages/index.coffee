@@ -4,13 +4,14 @@
 {EcoLanguage} = require './eco'
 {JadeLanguage} = require './jade'
 {JavaScriptLanguage} = require './javascript'
+{HoganLanguage} = require './hogan'
 {LESSLanguage} = require './less'
 {RoyLanguage} = require './roy'
+{SassLanguage} = require './sass'
 {StylusLanguage} = require './stylus'
-{HoganJsLanguage} = require './hogan'
 
 module.exports = {
   BaseLanguage, CoffeeScriptLanguage, CSSLanguage, EcoLanguage,
-  JadeLanguage, JavaScriptLanguage, LESSLanguage, RoyLanguage,
-  StylusLanguage, HoganJsLanguage
+  JadeLanguage, JavaScriptLanguage, HoganLanguage,
+  LESSLanguage, RoyLanguage, SassLanguage, StylusLanguage
 }

@@ -1,5 +1,4 @@
 async = require 'async'
-mkdirp = require 'mkdirp'
 {ncp} = require 'ncp'
 path = require 'path'
 {BasePlugin} = require './base'
