@@ -2,7 +2,6 @@ path = require 'path'
 
 class exports.BasePlugin
   constructor: (@config) ->
-    null
 
   getRootPath: (subPathes...) ->
     path.join @config.rootPath, subPathes...

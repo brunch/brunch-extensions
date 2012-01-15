@@ -6,8 +6,8 @@ hogan = require 'hogan.js'
 # Example:
 # $(@el).html(template.render name: "mdp", city: "SF")
 class exports.HoganLanguage extends BaseLanguage
-  compile: (file, callback) ->
-    @readFile file, (error, data) =>
+  compile: (path, callback) ->
+    @readFile path, (error, data) =>
       return callback error if error?
       try
         content = hogan.compile data, asString: yes

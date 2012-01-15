@@ -3,19 +3,15 @@ stylus = require 'stylus'
 
 # NIB is an official stylus library of useful mixins etc.
 # just like Compass.
-try
-  nib = require('nib')()
-catch error
-  null
+nib = (require 'nib')()
 
 class exports.StylusLanguage extends BaseLanguage
-  compile: (file, callback) ->
-    @readFile file, (error, data) =>
+  compile: (path, callback) ->
+    @readFile path, (error, data) =>
       return callback error if error?
       compiler = stylus(data)
         .set('compress', yes)
         .set('firebug', !!@config.stylus?.firebug)
         .include(@getRootPath 'app', 'styles')
-
-      compiler.use nib if nib
-      compiler.render callback
+        .use(nib)
+        .render(callback)

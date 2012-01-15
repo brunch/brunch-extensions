@@ -2,7 +2,10 @@ eco = require 'eco'
 {BaseLanguage} = require './base'
 
 class exports.EcoLanguage extends BaseLanguage
-  compile: (file, callback) ->
-    @readFile file, (error, data) =>
+  compile: (path, callback) ->
+    @readFile path, (error, data) =>
       return callback error if error?
-      callback null, eco.compile data
+      try
+        callback null, eco.compile data
+      catch error
+        callback error

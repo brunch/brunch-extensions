@@ -2,8 +2,12 @@
 {BaseLanguage} = require './base'
 
 class exports.SassLanguage extends BaseLanguage
-  compile: (file, callback) ->
-    @readFile file, (error, data) =>
+  constructor: ->
+    super
+    @process = spawn 'sass'
+
+  compile: (path, callback) ->
+    @readFile path, (error, data) =>
       return callback error if error?
       result = ''
       error = null
@@ -15,7 +19,7 @@ class exports.SassLanguage extends BaseLanguage
         '--load-path', (@getRootPath 'app', 'styles'),
         '--no-cache',
       ]
-      options.push '--scss' if /\.scss$/.test file
+      options.push '--scss' if /\.scss$/.test path
       sass = spawn 'sass', options
       sass.stdin.end data
       sass.stdout.on 'data', (data) -> result = data
