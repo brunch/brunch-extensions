@@ -6,6 +6,6 @@ class exports.EcoLanguage extends BaseLanguage
     @readFile path, (error, data) =>
       return callback error if error?
       try
-        callback null, eco.compile data
+        callback null, "module.exports = #{eco.compile data}"
       catch error
         callback error
