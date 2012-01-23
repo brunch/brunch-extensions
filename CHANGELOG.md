@@ -1,3 +1,7 @@
+## Brunch-extensions 0.3.0 (unreleased)
+* Added SASS & mustache support.
+* Added minifying support for JS & CSS.
+
 ## Brunch-extensions 0.2.2 (Januray 23, 2012)
 * Fixed Roy installation.
 
