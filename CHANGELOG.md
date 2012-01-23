@@ -1,3 +1,6 @@
+## Brunch-extensions 0.2.2 (Januray 23, 2012)
+* Fixed Roy installation.
+
 ## Brunch-extensions 0.2.1 (January 17, 2012)
 * Fixed installation from npm.
 
